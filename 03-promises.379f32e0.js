@@ -5,4 +5,4 @@ var t,e=arguments[3];!function(e,i){"function"==typeof t&&t.amd?t([],function(){
 },{}],"GyVV":[function(require,module,exports) {
 "use strict";var e=t(require("notiflix"));function t(e){return e&&e.__esModule?e:{default:e}}const n=document.querySelector(".form");function o(e,t){const n=Math.random()>.3;return new Promise((o,i)=>n?o({position:e,newDelay:t}):i({position:e,newDelay:t}))}function i(t){t.preventDefault();const n=t.currentTarget;let i=+n.delay.value;const s=+n.step.value,u=+n.amount.value;let r=0;for(let l=1;l<=u;l+=1){o(r=l,i,i+=s).then(({position:t,newDelay:n})=>{setTimeout(()=>{e.default.Notify.success(`✅ Fulfilled promise ${t} in ${n}ms`)},n)}).catch(({position:t,newDelay:n})=>{setTimeout(()=>{e.default.Notify.warning(`❌ Rejected promise ${t} in ${n}ms`)},n)})}}n.addEventListener("submit",i);
 },{"notiflix":"W3Ap"}]},{},["GyVV"], null)
-//# sourceMappingURL=/goit-js-hw-09/03-promises.4a84a8ab.js.map
+//# sourceMappingURL=/goit-js-hw-09/03-promises.379f32e0.js.map
